@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace LaraZeus\Artemis\Artemis;
 
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
-class SkeletonServiceProvider extends PluginServiceProvider
+class ArtemisServiceProvider extends PluginServiceProvider
 {
-    public static string $name = 'skeleton';
+    public static string $name = 'artemis';
 
     protected array $resources = [
         // CustomResource::class,
@@ -22,15 +22,15 @@ class SkeletonServiceProvider extends PluginServiceProvider
     ];
 
     protected array $styles = [
-        'plugin-skeleton' => __DIR__ . '/../resources/dist/skeleton.css',
+        'plugin-artemis' => __DIR__ . '/../resources/dist/artemis.css',
     ];
 
     protected array $scripts = [
-        'plugin-skeleton' => __DIR__ . '/../resources/dist/skeleton.js',
+        'plugin-artemis' => __DIR__ . '/../resources/dist/artemis.js',
     ];
 
     // protected array $beforeCoreScripts = [
-    //     'plugin-skeleton' => __DIR__ . '/../resources/dist/skeleton.js',
+    //     'plugin-artemis' => __DIR__ . '/../resources/dist/artemis.js',
     // ];
 
     public function configurePackage(Package $package): void
