@@ -4,9 +4,9 @@ namespace LaraZeus\Artemis\Artemis\Tests;
 
 use Filament\FilamentServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use LaraZeus\Artemis\Artemis\ArtemisServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use LaraZeus\Artemis\Artemis\ArtemisServiceProvider;
 
 class TestCase extends Orchestra
 {
