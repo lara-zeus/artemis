@@ -11,7 +11,6 @@ use Spatie\LaravelPackageTools\Package;
 
 class ArtemisServiceProvider extends PluginServiceProvider
 {
-    // 🎨
     public static string $name = 'zeus-sky';
 
     public function boot()
