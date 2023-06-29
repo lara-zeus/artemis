@@ -17,8 +17,8 @@ class ArtemisServiceProvider extends PluginServiceProvider
         //CoreServiceProvider::setThemePath('artemis');
 
         $viewPath = 'zeus::themes.artemis';
-        View::share('artemis'.'Theme', $viewPath);
-        App::singleton('artemis'.'Theme', function () use ($viewPath) {
+        View::share('artemis' . 'Theme', $viewPath);
+        App::singleton('artemis' . 'Theme', function () use ($viewPath) {
             return $viewPath;
         });
     }

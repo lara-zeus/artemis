@@ -13,6 +13,6 @@ class ReadingTime
             return (int) $m;
         }
 
-        return $m.' ' . __('minute') .($m == 1 ? '' : 's');
+        return $m . ' ' . __('minute') . ($m == 1 ? '' : 's');
     }
 }
