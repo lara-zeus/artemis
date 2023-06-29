@@ -5,42 +5,29 @@ namespace LaraZeus\Artemis;
 use Filament\PluginServiceProvider;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\View;
-use LaraZeus\Sky\Console\migrateCommand;
-use LaraZeus\Sky\Filament\Resources\TagResource;
+use LaraZeus\Core\CoreServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
 class ArtemisServiceProvider extends PluginServiceProvider
 {
-    public static string $name = 'zeus-sky';
+    public static string $name = 'zeus-artemis';
 
-    public function boot()
+    public function bootingPackage(): void
     {
-        View::share('theme', 'zeus-sky::themes.'.config('zeus-sky.theme', 'zeus'));
+        //CoreServiceProvider::setThemePath('artemis');
 
-        App::singleton('theme', function () {
-            return 'zeus-sky::themes.'.config('zeus-sky.theme', 'zeus');
+        $viewPath = 'zeus::themes.artemis';
+        View::share('artemis'.'Theme', $viewPath);
+        App::singleton('artemis'.'Theme', function () use ($viewPath) {
+            return $viewPath;
         });
-
-        return parent::boot();
     }
 
-    public function configurePackage(Package $package): void
+    public function packageConfigured(Package $package): void
     {
-        parent::configurePackage($package);
         $package
-            ->hasConfigFile()
-            ->hasMigrations(['create_posts_table', 'create_faqs_table', 'modify_posts_columns'])
-            ->hasRoute('web')
-            ->hasCommand(migrateCommand::class)
+            ->hasAssets()
+            ->hasViews('zeus')
             ->hasTranslations();
-    }
-
-    protected function getResources(): array
-    {
-        // TagResouce should not be disabled.
-        return array_merge(
-            config('zeus-sky.enabled_resources'),
-            [TagResource::class]
-        );
     }
 }
