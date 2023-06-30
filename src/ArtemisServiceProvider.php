@@ -13,7 +13,7 @@ class ArtemisServiceProvider extends PluginServiceProvider
 
     public function bootingPackage(): void
     {
-        $themePath = 'zeus::themes.'.config('zeus.theme');
+        $themePath = 'zeus::themes.' . config('zeus.theme');
         View::share('artemisTheme', $themePath);
         App::singleton('artemisTheme', function () use ($themePath) {
             return $themePath;
