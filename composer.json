@@ -1,6 +1,6 @@
 {
-  "name": "lara-zeus/artimes",
-  "description": "theme for lara zeus sky",
+  "name": "lara-zeus/artemis",
+  "description": "artistic themes for lara zeus sky",
   "keywords": [
     "laravel",
     "lara-zeus",
@@ -19,36 +19,34 @@
   "type": "library",
   "authors": [
     {
-      "name": "Ashraf Monshi",
+      "name": "php coder",
       "email": "wh7r.com@gmail.com",
       "role": "Owner"
     }
   ],
   "require": {
     "php": "^8.0",
-    "lara-zeus/sky": "^2.4"
+    "lara-zeus/core": "dev-themes"
   },
-  "scripts": {
-    "pint": "vendor/bin/pint",
-    "test:pest": "vendor/bin/pest --parallel",
-    "test:phpstan": "vendor/bin/phpstan analyse",
-    "test": [
-      "@test:pest",
-      "@test:phpstan"
-    ]
+  "autoload": {
+    "psr-4": {
+      "LaraZeus\\Artemis\\": "src"
+    }
   },
   "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "pestphp/pest-plugin": true,
-      "phpstan/extension-installer": true
-    }
+    "sort-packages": true
   },
   "extra": {
     "laravel": {
       "providers": [
-        "ArtemisServiceProvider"
+        "LaraZeus\\Artemis\\ArtemisServiceProvider"
       ]
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../core"
+    }
+  ]
 }
