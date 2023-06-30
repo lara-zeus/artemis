@@ -26,7 +26,7 @@
   ],
   "require": {
     "php": "^8.0",
-    "lara-zeus/core": "dev-main"
+    "lara-zeus/core": "dev-themes"
   },
   "autoload": {
     "psr-4": {

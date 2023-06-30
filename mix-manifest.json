@@ -1,4 +1,7 @@
 {
-    "/resources/dist/css/app.css": "/resources/dist/css/app.css",
-    "/demo/public/vendor/zeus-artemis/css/app.css": "/demo/public/vendor/zeus-artemis/css/app.css"
+    "/demo/public/vendor/zeus-artemis/css/app.css": "/demo/public/vendor/zeus-artemis/css/app.css",
+    "/demo/public/vendor/zeus-artemis/css/breeze.css": "/demo/public/vendor/zeus-artemis/css/breeze.css",
+    "/demo/public/vendor/zeus-artemis/css/daisyui.css": "/demo/public/vendor/zeus-artemis/css/daisyui.css",
+    "/resources/dist/css/daisyui.css": "/resources/dist/css/daisyui.css",
+    "/resources/dist/css/breeze.css": "/resources/dist/css/breeze.css"
 }

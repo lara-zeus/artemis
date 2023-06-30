@@ -5,7 +5,6 @@ namespace LaraZeus\Artemis;
 use Filament\PluginServiceProvider;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\View;
-use LaraZeus\Core\CoreServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
 class ArtemisServiceProvider extends PluginServiceProvider
@@ -14,12 +13,10 @@ class ArtemisServiceProvider extends PluginServiceProvider
 
     public function bootingPackage(): void
     {
-        //CoreServiceProvider::setThemePath('artemis');
-
-        $viewPath = 'zeus::themes.artemis';
-        View::share('artemis'.'Theme', $viewPath);
-        App::singleton('artemis'.'Theme', function () use ($viewPath) {
-            return $viewPath;
+        $themePath = 'zeus::themes.'.config('zeus.theme');
+        View::share('artemisTheme', $themePath);
+        App::singleton('artemisTheme', function () use ($themePath) {
+            return $themePath;
         });
     }
 
