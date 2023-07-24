@@ -4,7 +4,6 @@ namespace LaraZeus\Artemis;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\View;
-use LaraZeus\Core\CoreServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
