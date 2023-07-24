@@ -1,58 +1,62 @@
 {
-  "name": "lara-zeus/artemis",
-  "description": "artistic themes for lara zeus sky",
-  "keywords": [
-    "laravel",
-    "lara-zeus",
-    "sky",
-    "cms",
-    "pages",
-    "posts",
-    "menu",
-    "news",
-    "wordpress laravel",
-    "wordpress alternative",
-    "laravel cms"
-  ],
-  "homepage": "https://larazeus.com",
-  "license": "MIT",
-  "type": "library",
-  "authors": [
-    {
-      "name": "php coder",
-      "email": "wh7r.com@gmail.com",
-      "role": "Owner"
-    }
-  ],
-  "require": {
-    "php": "^8.0",
-    "lara-zeus/core": "3.x-dev"
-  },
-  "require-dev": {
-    "orchestra/testbench": "^7.0 || ^8.0",
-    "laravel/pint": "^1.0",
-    "nunomaduro/collision": "^6.0",
-    "nunomaduro/larastan": "^2.0.1",
-    "phpstan/extension-installer": "^1.1",
-    "phpstan/phpstan-deprecation-rules": "^1.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "LaraZeus\\Artemis\\": "src"
-    }
-  },
-  "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "phpstan/extension-installer": true
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "LaraZeus\\Artemis\\ArtemisServiceProvider"
-      ]
-    }
-  },
-  "minimum-stability": "dev"
+    "name": "lara-zeus/artemis",
+    "description": "artistic themes for lara zeus sky",
+    "keywords": [
+        "laravel",
+        "lara-zeus",
+        "sky",
+        "cms",
+        "pages",
+        "posts",
+        "menu",
+        "news",
+        "wordpress laravel",
+        "wordpress alternative",
+        "laravel cms"
+    ],
+    "homepage": "https://larazeus.com/artemis",
+    "support": {
+        "issues": "https://github.com/lara-zeus/artemis/issues",
+        "source": "https://github.com/lara-zeus/artemis"
+    },
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "php coder",
+            "email": "wh7r.com@gmail.com",
+            "role": "Owner"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "lara-zeus/core": "3.x-dev"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0 || ^8.0",
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaraZeus\\Artemis\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaraZeus\\Artemis\\ArtemisServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
 }
