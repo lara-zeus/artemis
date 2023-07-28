@@ -26,7 +26,7 @@
                                         <x-heroicon-o-film x-tooltip.raw="{{ __('Video') }}" class="w-4 h-4 text-gray-400 dark:text-gray-500" />
                                     @endif
                                 </div>
-                                <cite class="text-sm text-secondary-600 dark:text-secondary-500 hover:dark:text-secondary-300">
+                                <cite class="text-sm text-custom-600 dark:text-custom-500 hover:dark:text-custom-300">
                                     {{ $library->description }}
                                 </cite>
                             </a>

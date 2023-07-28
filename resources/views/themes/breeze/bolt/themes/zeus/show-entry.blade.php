@@ -31,7 +31,7 @@
         </div>
         <div class="md:col-span-1 space-y-4">
             <x-filament::card class="w-full">
-                <x-filament::card.heading class="text-secondary-600">
+                <x-filament::card.heading class="text-custom-600">
                     {{ __('User Details') }}
                 </x-filament::card.heading>
                 <p>
@@ -51,7 +51,7 @@
                 <div class="space-y-2">
                     <x-filament::card>
                         <x-filament::card.heading class="text-primary-600">
-                            <p class="my-3 mx-1 text-secondary-600 font-semibold">{{ __('Entry Details') }}</p>
+                            <p class="my-3 mx-1 text-custom-600 font-semibold">{{ __('Entry Details') }}</p>
                         </x-filament::card.heading>
 
                         <div class="flex flex-col">
