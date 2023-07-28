@@ -4,7 +4,7 @@ namespace LaraZeus\Artemis\Classes;
 
 class ReadingTime
 {
-    public static function readingTime($post, $fullText = false): int|string
+    public static function readingTime($post, $fullText = false): int | string
     {
         $word = str_word_count(strip_tags($post));
         $m = floor($word / 200);
