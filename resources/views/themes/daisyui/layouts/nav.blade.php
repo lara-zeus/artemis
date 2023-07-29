@@ -20,7 +20,6 @@
                 @endforeach
             @endif
 
-            {{--todo set with config--}}
             @include($artemisTheme.'.layouts.theme-switcher')
 
         </ul>

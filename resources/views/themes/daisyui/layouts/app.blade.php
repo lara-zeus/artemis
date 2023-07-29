@@ -75,7 +75,6 @@
 </footer>
 
 <script src="{{ asset('vendor/zeus/app.js') }}" defer></script>
-{{--todo set with config--}}
 <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 
 @stack('scripts')
