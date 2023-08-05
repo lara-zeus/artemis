@@ -61,10 +61,10 @@
 
                         <div>
                             <span>{{ __('status') }}</span>
-                            @php $getStatues = \LaraZeus\Bolt\BoltPlugin::getModel('FormsStatus')::where('key',$response->status)->first() @endphp
-                            <span class="{{ $getStatues->class }}" x-tooltip.raw="{{ __('status') }}">
-                                @svg($getStatues->icon,'w-4 h-4 inline')
-                                {{ $getStatues->label }}
+                            @php $getStatues = $response->statusDetails() @endphp
+                            <span class="{{ $getStatues['class']}}" x-tooltip.raw="{{ __('status') }}">
+                                @svg($getStatues['icon'],'w-4 h-4 inline')
+                                {{ $getStatues['label'] }}
                             </span>
                         </div>
 

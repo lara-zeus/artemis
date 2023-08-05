@@ -12,7 +12,7 @@
                                 @php
                                     $getWidget = new $data['data']['widget'];
                                 @endphp
-                                <x-zeus.card>
+                                <x-zeus::card>
                                     @if($data['data']['title'])
                                         <x-slot name="title">
                                             {{ $data['data']['title'] }}
@@ -21,7 +21,7 @@
                                     <div class="@if($data['data']['title']) pt-2 @endif">
                                         {!! $getWidget->render($data['data']) !!}
                                     </div>
-                                </x-zeus.card>
+                                </x-zeus::card>
                             @endif
                         @endforeach
                     @endif

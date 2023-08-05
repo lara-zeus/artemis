@@ -5,7 +5,7 @@
 
         @if($zeusForm->start_date !== null)
             <div class="text-gray-400 text-sm">
-                <x-heroicon-o-calendar class="h-4 w-4 inline-flex" />
+                @svg('heroicon-o-calendar','h-4 w-4 inline-flex')
                 <span>{{ __('Available from') }}:</span>
                 <span>{{ optional($zeusForm->start_date)->format('Y/m/d') }}</span>,
                 <span>{{ __('to') }}:</span>
@@ -17,14 +17,14 @@
     <x-slot name="breadcrumps">
         <li class="flex items-center">
             <a href="{{ route('bolt.forms.list') }}">{{ __('Forms') }}</a>
-            <x-iconpark-rightsmall-o class="fill-current w-4 h-4 mx-3 rtl:rotate-180" />
+            @svg('iconpark-rightsmall-o','fill-current w-4 h-4 mx-3 rtl:rotate-180')
         </li>
         <li class="flex items-center">
             {{ $zeusForm->name }}
         </li>
     </x-slot>
 
-    <x-filament::form wire:submit.prevent="store">
+    <x-filament-panels::form wire:submit.prevent="store">
         {{ \LaraZeus\Bolt\Facades\Bolt::renderHookBlade('zeus-form.before') }}
 
         @if(!empty($zeusForm->details))
@@ -38,11 +38,11 @@
         {{ $this->form }}
 
         <div class="px-4 py-2 text-center">
-            <x-filament-support::button type="submit">
+            <x-filament::button type="submit">
                 {{ __('Save') }}
-            </x-filament-support::button>
+            </x-filament::button>
         </div>
 
         {{ \LaraZeus\Bolt\Facades\Bolt::renderHookBlade('zeus-form.after') }}
-    </x-filament::form>
+    </x-filament-panels::form>
 </div>

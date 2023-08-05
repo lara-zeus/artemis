@@ -16,9 +16,9 @@ class ArtemisServiceProvider extends PackageServiceProvider
         $themePath = 'zeus::themes.' . config('zeus.theme');
         View::share('artemisTheme', $themePath);
         // not needed in app level
-        /*App::singleton('artemisTheme', function () use ($themePath) {
+        App::singleton('artemisTheme', function () use ($themePath) {
             return $themePath;
-        });*/
+        });
     }
 
     public function configurePackage(Package $package): void

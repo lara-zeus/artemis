@@ -1,4 +1,4 @@
-<div>
+<div class="not-prose">
     <x-slot name="header">
         <h2>{{ $zeusForm->name ?? '' }}</h2>
         <p class="text-gray-400 text-mdd my-2">{{ $zeusForm->description ?? '' }}</p>
@@ -24,8 +24,10 @@
         </li>
     </x-slot>
 
-    <x-filament-panels::form wire:submit.prevent="store">
+    <x-filament-panels::form wire:submit.prevent="store" class="mx-2">
         {{ \LaraZeus\Bolt\Facades\Bolt::renderHookBlade('zeus-form.before') }}
+
+        {!! \LaraZeus\Bolt\Facades\Extensions::init($zeusForm, 'render',$extensionData) !!}
 
         @if(!empty($zeusForm->details))
             <div class="m-4">

@@ -7,7 +7,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
         @foreach($categories as $category)
             <x-filament::card>
-                <h2>{{ $category->name }}</h2>
+                <h2><a href="{{ route('library.tag',$category->slug ) }}" class="text-secondary-600">{{ $category->name }}</a></h2>
                 <div class="space-y-2">
                     @foreach($category->library as $library)
                         <div>
@@ -16,7 +16,7 @@
                                     <h3>{{ $library->title ?? '' }}</h3>
                                     @if($library->type === 'IMAGE')
                                         <span x-tooltip.raw="{{ __('Image') }}">
-                                            @svg('heroicon-o-photograph','w-4 h-4 text-gray-400 dark:text-gray-500')
+                                            @svg('heroicon-o-photo','w-4 h-4 text-gray-400 dark:text-gray-500')
                                         </span>
                                     @endif
 

@@ -63,7 +63,7 @@
                     <ol class="list-none p-0 inline-flex">
                         <li class="flex items-center">
                             <a href="{{ url('/') }}">{{ __('Home') }}</a>
-                            <x-iconpark-rightsmall-o class="fill-current w-4 h-4 mx-3 rtl:rotate-180" />
+                            @svg('iconpark-rightsmall-o','fill-current w-4 h-4 mx-3 rtl:rotate-180')
                         </li>
                         {{ $breadcrumps }}
                     </ol>

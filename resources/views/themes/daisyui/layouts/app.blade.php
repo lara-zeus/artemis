@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ __('filament::layout.direction') ?? 'ltr' }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+      dir="{{ app()->getLocale() === 'ar' ? "rtl" : 'ltr' }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/zeus-artemis/css/daisyui.css') }}">
 
     @livewireStyles
+    @filamentStyles
     @stack('styles')
 
     <style>
@@ -25,7 +27,7 @@
     </style>
 </head>
 
-@php $menu = RyanChandler\FilamentNavigation\Facades\FilamentNavigation::get(config('zeus-artemis.header_menu')); @endphp
+@php $menu = RyanChandler\FilamentNavigation\Models\Navigation::fromHandle(config('zeus-artemis.header_menu')) @endphp
 
 <body class="@if(app()->isLocal()) debug-screens @endif antialiased">
 
@@ -47,7 +49,7 @@
                     <ol class="list-none p-0 inline-flex">
                         <li class="flex items-center">
                             <a href="{{ route('blogs') }}">Home</a>
-                            <x-iconpark-rightsmall-o class="fill-current w-4 h-4 mx-3" />
+                            @svg('iconpark-rightsmall-o','fill-current w-4 h-4 mx-3')
                         </li>
                         {{ $breadcrumps }}
                     </ol>
@@ -79,6 +81,7 @@
 
 @stack('scripts')
 @livewireScripts
+@filamentScripts
 @livewire('notifications')
 
 <script>
