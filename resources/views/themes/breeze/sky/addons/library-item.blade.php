@@ -15,7 +15,7 @@
         </li>
     </x-slot>
 
-    <x-filament::card>
+    <x-filament::section>
         <h1>{{ $item->title }}</h1>
 
         <p>
@@ -45,5 +45,5 @@
                 Your browser does not support HTML video.
             </video>
         @endif
-    </x-filament::card>
+    </x-filament::section>
 </div>

@@ -4,7 +4,7 @@
     </x-slot>
     <x-slot name="breadcrumb"></x-slot>
     <div class="max-w-4xl mx-auto px-4">
-        <x-filament::card>
+        <x-filament::section>
             @if(isset($form->options['confirmation_message']) && !empty($form->options['confirmation_message']))
                 <span class="text-xs text-gray-400">
                     {!! $form->options['confirmation_message'] !!}
@@ -14,6 +14,6 @@
                     {{ __('the form') }} {{ $form->name ?? '' }} {{ __('submitted successfully') }}.
                 </span>
             @endif
-        </x-filament::card>
+        </x-filament::section>
     </div>
 </div>

@@ -1,7 +1,7 @@
 ---
 title: v1
-slogan: themes for Lara Zeus Sky.
+slogan: themes for Lara Zeus packages.
 githubUrl: https://github.com/lara-zeus/artemis
 branch: main
-icon: ri-cloud-windy-line
+icon: rpg-spear-head
 ---
