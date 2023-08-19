@@ -1,16 +1,10 @@
-<x-filament-forms::field-wrapper
-        :id="$getId()"
-        :label="$getLabel()"
-        :label-sr-only="$isLabelHidden()"
-        :helper-text="$getHelperText()"
-        :hint="$getHint()"
-        :hint-icon="$getHintIcon()"
-        :required="$isRequired()"
-        :state-path="$getStatePath()"
+<x-dynamic-component
+    :component="$getFieldWrapperView()"
+    :field="$field"
 >
-    <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}') }">
+    <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}').defer }">
         @if(\LaraZeus\Wind\WindPlugin::get()->hasDepartmentResource())
-            @php $departments = \LaraZeus\Wind\WindPlugin::get()->getDepartmentModel()::whereIsActive(1)->orderBy('ordering')->get(); @endphp
+            @php $departments = \LaraZeus\Wind\WindPlugin::get()->getDepartmentModel()::departments()->get(); @endphp
             @if($departments->isEmpty())
                 <x-filament::section>
                     <div class="text-red-400">
@@ -36,7 +30,7 @@
                                         @endif
                                         {{ $dept->name ?? '' }}
                                     </span>
-                                    <span class="text-gray-500 dark:text-gray-100 text-center px-2 overflow-clip overflow-hidden ">{{ $dept->desc ?? '' }}</span>
+                                    <span class="text-gray-500 dark:text-gray-100 text-center px-2 overflow-clip">{{ $dept->desc ?? '' }}</span>
                                 </span>
                             </label>
                         </div>
@@ -45,4 +39,4 @@
             @endif
         @endif
     </div>
-</x-filament-forms::field-wrapper>
+</x-dynamic-component>

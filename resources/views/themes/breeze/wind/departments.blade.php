@@ -1,16 +1,10 @@
-<x-filament-forms::field-wrapper
-        :id="$getId()"
-        :label="$getLabel()"
-        :label-sr-only="$isLabelHidden()"
-        :helper-text="$getHelperText()"
-        :hint="$getHint()"
-        :hint-icon="$getHintIcon()"
-        :required="$isRequired()"
-        :state-path="$getStatePath()"
+<x-dynamic-component
+    :component="$getFieldWrapperView()"
+    :field="$field"
 >
-    <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}') }">
+    <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}').defer }">
         @if(\LaraZeus\Wind\WindPlugin::get()->hasDepartmentResource())
-            @php $departments = \LaraZeus\Wind\WindPlugin::get()->getDepartmentModel()::whereIsActive(1)->orderBy('ordering')->get(); @endphp
+            @php $departments = \LaraZeus\Wind\WindPlugin::get()->getDepartmentModel()::departments()->get(); @endphp
             @if($departments->isEmpty())
                 <x-filament::section>
                     <div class="text-red-400">
@@ -28,15 +22,15 @@
                     @foreach($departments as $dept)
                         <div>
                             <label class="checkbox-wrapper">
-                                <input wire:model="{{ $getStatePath() }}" {{--@checked($departments->count() === 1 || request('department') === $dept->slug)--}} type="radio" class="checkbox-input" name="group" value="{{ $dept->id }}"/>
+                                <input wire:model="{{ $getStatePath() }}" type="radio" class="checkbox-input" name="group" value="{{ $dept->id }}"/>
                                 <span class="checkbox-tile hover:border-custom-500 p-4">
                                     <span class="text-primary-600 dark:text-primary-500 flex flex-col items-center justify-center gap-2">
-                                        @if($dept->logo !== null)
-                                            <img class="w-full h-32 object-center object-cover" src="{{ \Illuminate\Support\Facades\Storage::disk(\LaraZeus\Wind\WindPlugin::get()->getUploadDisk())->url($dept->logo) }}">
+                                        @if($dept->image() !== null)
+                                            <img alt="{{ $dept->name ?? '' }}" class="w-full h-32 object-center object-cover" src="{{ $dept->image() }}">
                                         @endif
                                         {{ $dept->name ?? '' }}
                                     </span>
-                                    <span class="text-gray-500 dark:text-gray-100 text-center px-2 overflow-clip overflow-hidden ">{{ $dept->desc ?? '' }}</span>
+                                    <span class="text-gray-500 dark:text-gray-100 text-center px-2 overflow-clip">{{ $dept->desc ?? '' }}</span>
                                 </span>
                             </label>
                         </div>
@@ -45,4 +39,4 @@
             @endif
         @endif
     </div>
-</x-filament-forms::field-wrapper>
+</x-dynamic-component>
