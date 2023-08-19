@@ -1,6 +1,6 @@
 <?php
 
-namespace LaraZeus\Artemis\Classes;
+namespace LaraZeus\Artemis\Concerns;
 
 class ReadingTime
 {
