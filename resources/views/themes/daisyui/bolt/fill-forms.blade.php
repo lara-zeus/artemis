@@ -14,7 +14,7 @@
         @endif
     </x-slot>
 
-    <x-slot name="breadcrumps">
+    <x-slot name="breadcrumbs">
         <li class="flex items-center">
             <a href="{{ route('bolt.forms.list') }}">{{ __('Forms') }}</a>
             @svg('iconpark-rightsmall-o','fill-current w-4 h-4 mx-3 rtl:rotate-180')

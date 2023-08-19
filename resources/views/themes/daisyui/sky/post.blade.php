@@ -3,7 +3,7 @@
         <span class="capitalize">{{ $post->title }}</span>
     </x-slot>
 
-    <x-slot name="breadcrumps">
+    <x-slot name="breadcrumbs">
         <li>
             <a class="text-gray-500 dark:text-gray-100 capitalize" aria-current="page">
                 {{ $post->title }}

@@ -4,7 +4,7 @@
         <h2>{{ $item->title }}</h2>
     </x-slot>
 
-    <x-slot name="breadcrumps">
+    <x-slot name="breadcrumbs">
         <li class="flex items-center">
             <a href="{{ route('library') }}">{{ __('library') }}</a>
             @svg('iconpark-rightsmall-o','fill-current w-4 h-4 mx-3')

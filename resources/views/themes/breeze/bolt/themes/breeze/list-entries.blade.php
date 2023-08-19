@@ -3,7 +3,7 @@
         <h2>{{ __('browse your forms') }}</h2>
     </x-slot>
 
-    <x-slot name="breadcrumb"></x-slot>
+    <x-slot name="breadcrumbs"></x-slot>
 
     <div class="my-6">
         {{ $this->table }}

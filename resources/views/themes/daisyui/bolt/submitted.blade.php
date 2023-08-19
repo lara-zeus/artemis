@@ -2,7 +2,9 @@
     <x-slot name="header">
         <h2>{{ __('form submitted successfully') }}</h2>
     </x-slot>
-    <x-slot name="breadcrumb"></x-slot>
+
+    <x-slot name="breadcrumbs"></x-slot>
+
     <div class="max-w-4xl mx-auto px-4">
         <x-filament::section>
             @if(!empty($form->options['confirmation_message']))
