@@ -92,7 +92,7 @@
                                 <time class="text-gray-500 dark:text-gray-400" datetime="">
                                     {{ optional($post->published_at)->diffForHumans() ?? '' }}
                                 </time>
-                                <span>· {{ \LaraZeus\Artemis\Classes\ReadingTime::readingTime($post->content, true) }}</span>
+                                <span>· {{ \LaraZeus\Artemis\Concerns\ReadingTime::readingTime($post->content, true) }}</span>
                             </div>
                         </div>
                     </div>
