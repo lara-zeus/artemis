@@ -30,7 +30,9 @@
         @include(app('boltTheme').'.submitted')
     @else
         <x-filament-panels::form wire:submit.prevent="store" class="mx-2">
-            {{ \LaraZeus\Bolt\Facades\Bolt::renderHookBlade('zeus-form.before') }}
+            @if(!$inline)
+                {{ \LaraZeus\Bolt\Facades\Bolt::renderHookBlade('zeus-form.before') }}
+            @endif
 
             {!! \LaraZeus\Bolt\Facades\Extensions::init($zeusForm, 'render',$extensionData) !!}
 
@@ -45,12 +47,14 @@
             {{ $this->form }}
 
             <div class="px-4 py-2 text-center">
-                <x-filament::button type="submit">
+                <button type="submit" class="btn btn-primary btn-sm">
                     {{ __('Save') }}
-                </x-filament::button>
+                </button>
             </div>
 
-            {{ \LaraZeus\Bolt\Facades\Bolt::renderHookBlade('zeus-form.after') }}
+            @if(!$inline)
+                {{ \LaraZeus\Bolt\Facades\Bolt::renderHookBlade('zeus-form.after') }}
+            @endif
         </x-filament-panels::form>
     @endif
 </div>
