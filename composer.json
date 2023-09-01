@@ -1,6 +1,6 @@
 {
     "name": "lara-zeus/artemis",
-    "description": "artistic themes for lara zeus sky",
+    "description": "artistic themes for all lara zeus packages, telling a story with a design",
     "keywords": [
         "laravel",
         "lara-zeus",
@@ -33,12 +33,14 @@
         "lara-zeus/core": "^3.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^7.0 || ^8.0",
         "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^6.0",
         "nunomaduro/larastan": "^2.0.1",
         "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0"
+        "nunomaduro/collision": "^7.0",
+        "nunomaduro/phpinsights": "^2.8",
+        "orchestra/testbench": "^8.0",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -48,7 +50,8 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "extra": {
