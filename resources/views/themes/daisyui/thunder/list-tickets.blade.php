@@ -8,4 +8,8 @@
     <div class="my-6">
         {{ $this->table }}
     </div>
+
+    @push('styles')
+        @filamentStyles
+    @endpush
 </div>

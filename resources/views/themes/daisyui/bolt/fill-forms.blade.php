@@ -27,7 +27,7 @@
     @endif
 
     @if($sent)
-        @include(app('boltTheme').'.submitted')
+        @include($boltTheme.'.submitted')
     @else
         <x-filament-panels::form wire:submit.prevent="store" class="mx-2">
             @if(!$inline)
@@ -57,4 +57,8 @@
             @endif
         </x-filament-panels::form>
     @endif
+
+    @push('styles')
+        @filamentStyles
+    @endpush
 </div>

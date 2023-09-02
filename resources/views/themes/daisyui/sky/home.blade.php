@@ -1,5 +1,4 @@
-<div class="container mx-auto">
-
+<div class="container mx-auto my-10">
     <div class="overflow-hidden">
         @unless($stickies->isEmpty())
             <div class="carousel w-full md:h-96">
@@ -34,11 +33,5 @@
         @else
             @include($skyTheme.'.partial.empty')
         @endunless
-    </div>
-
-    <div class="mt-10 flex justify-center">
-        <a href="/archive" class="relative inline-flex items-center gap-1 rounded-2xl border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300">
-            <span>{{ __('View all Posts') }}</span>
-        </a>
     </div>
 </div>
