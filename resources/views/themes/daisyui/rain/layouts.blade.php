@@ -13,7 +13,7 @@
                                     $data['data']['key'] = $key;
                                     $getWidget = new $data['data']['widget'];
                                 @endphp
-                                <div class="card w-full bg-base-100 shadow-xl">
+                                <div class="my-4 card w-full bg-base-100 shadow-lg">
                                     <div class="card-body">
                                         @if($data['data']['title'])
                                             <p class="card-title">Placeholder</p>
