@@ -9,7 +9,6 @@
     <div class="card-body">
         <h2 class="card-title">
             <a href="{{ route('post',$post->slug) }}">{{ $post->title }}</a>
-            {{--<div class="badge badge-secondary">NEW</div>--}}
         </h2>
         @if($post->description !== null)
             <p class="py-4">
@@ -26,20 +25,20 @@
                 @each($skyTheme.'.partial.tag', $post->tags->where('type','tag'), 'tag')
             @endunless
         </div>
-    </div>
-</div>
 
-<div class="hidden mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400">
-    <div class="flex items-center gap-3">
-        <div class="relative h-5 w-5 flex-shrink-0">
-            <img src="{{ \Filament\Facades\Filament::getUserAvatarUrl($post->author) }}" alt="avatar" class="rounded-full object-cover">
-        </div>
-        <span class="truncate text-sm">
+        <div class="hidden mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400">
+            <div class="flex items-center gap-3">
+                <div class="relative h-5 w-5 flex-shrink-0">
+                    <img src="{{ \Filament\Facades\Filament::getUserAvatarUrl($post->author) }}" alt="avatar" class="rounded-full object-cover">
+                </div>
+                <span class="truncate text-sm">
             {{ $post->author->name ?? '' }}
         </span>
+            </div>
+            <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+            <time class="truncate text-sm" datetime="2022-10-21T06:05:00.000Z">
+                {{ optional($post->published_at)->diffForHumans() ?? '' }}
+            </time>
+        </div>
     </div>
-    <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
-    <time class="truncate text-sm" datetime="2022-10-21T06:05:00.000Z">
-        {{ optional($post->published_at)->diffForHumans() ?? '' }}
-    </time>
 </div>

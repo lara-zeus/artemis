@@ -1,7 +1,7 @@
 const mix = require('laravel-mix');
 
 mix
-    .postCss("resources/css/daisyui.css", "resources/dist/css", [
+    .postCss("resources/css/daisy.css", "resources/dist/css", [
        require("tailwindcss"),
    ])
     .postCss("resources/css/breeze.css", "resources/dist/css", [

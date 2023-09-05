@@ -25,8 +25,9 @@
 ## features
 - 🔥 Themes for all Zeus packages.
 - 🔥 Highly Customizable.
-- 🔥 Daisyui Theme.
-- 🔥 Breeze Theme.
+- 🔥 Daisy Theme.
+- 🔥 Breeze Theme (soon).
+- 🔥 Another Theme (soon).
 
 And more on the way.
 

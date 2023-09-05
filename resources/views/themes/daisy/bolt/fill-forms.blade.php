@@ -37,7 +37,7 @@
             {!! \LaraZeus\Bolt\Facades\Extensions::init($zeusForm, 'render',$extensionData) !!}
 
             @if(!empty($zeusForm->details))
-                <div class="m-4">
+                <div class="my-4">
                     <x-filament::section :compact="true">
                         {!! nl2br($zeusForm->details) !!}
                     </x-filament::section>
