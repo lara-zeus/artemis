@@ -19,7 +19,7 @@
         <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
 
         <link rel="stylesheet" href="{{ asset('vendor/zeus-artemis/css/another-portfolio.css') }}">
-        <link rel="stylesheet" href="{{ mix('css/flag-icons.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/flag-icons.css') }}">
 
         <style>
             [x-cloak] {
@@ -77,7 +77,7 @@
         @livewireScripts
         @filamentScripts
         @livewire('notifications')
-        @livewire('livewire-ui-modal')
+        {{--@livewire('livewire-ui-modal')--}}
 
         <script>
             document.addEventListener('alpine:init', () => {

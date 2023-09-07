@@ -12,13 +12,13 @@
                                 @php
                                     $getWidget = new $data['data']['widget'];
                                 @endphp
-                                <div class="{{--bg-white dark:bg-black shadow--}} my-10 py-3 px-4 {{--hover:shadow-lg--}} transition-all ease-in-out duration-500">
+                                <div class="bg-white dark:bg-black shadow my-10 py-3 px-4 hover:shadow-lg transition-all ease-in-out duration-500">
                                     @if($data['data']['title'])
-                                        <h5 class="mb-2 bg-gray-100 dark:bg-gray-900 border border-secondary-200 dark:border-secondary-900/50 rounded-3xl ltr:rounded-tl-none rtl:rounded-tr-none absolute -mt-8 px-4 py-2 shadow font-bold text-sm lg:text-lg text-primary-600 dark:text-primary-100">
+                                        <h5 class="px-4 py-2 text-center font-bold text-sm lg:text-lg text-primary-600 dark:text-primary-100">
                                             {{ $data['data']['title'] }}
                                         </h5>
                                     @endif
-                                    <div class="@if($data['data']['title']) pt-4 @endif">
+                                    <div>
                                         {!! $getWidget->render($data['data']) !!}
                                     </div>
                                 </div>
