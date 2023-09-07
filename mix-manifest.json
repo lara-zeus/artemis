@@ -1,4 +1,6 @@
 {
+    "/resources/dist/js/another-portfolio.js": "/resources/dist/js/another-portfolio.js",
+    "/resources/dist/css/another-portfolio.css": "/resources/dist/css/another-portfolio.css",
     "/resources/dist/css/breeze.css": "/resources/dist/css/breeze.css",
-    "/resources/dist/css/daisyui.css": "/resources/dist/css/daisyui.css"
+    "/resources/dist/css/daisy.css": "/resources/dist/css/daisy.css"
 }

@@ -25,7 +25,6 @@ module.exports = {
     },
     plugins: [
         require("daisyui"),
-        require('tailwindcss-debug-screens'),
         require('@tailwindcss/typography'),
     ],
 }
