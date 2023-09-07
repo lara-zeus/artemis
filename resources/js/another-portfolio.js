@@ -1,11 +1,12 @@
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
+import PhotoSwipe from 'photoswipe';
 
 const lightbox = new PhotoSwipeLightbox({
     mainClass: 'pswp--custom-icon-colors',
     gallery: '#library-images-gallery',
     showHideAnimationType: 'fade',
     children: 'a',
-    pswpModule: () => import('photoswipe')
+    pswpModule: () => PhotoSwipe
 });
+
 lightbox.init();

@@ -35,7 +35,7 @@
 
             <div class="flex flex-col items-start justify-start gap-4">
                 <div>
-                    <a href="#" class="text-2xl font-bold text-gray-700 dark:text-gray-100 hover:underline">
+                    <a class="text-2xl font-bold text-primary-500 dark:text-gray-100 hover:underline">
                         {{ $post->title ?? '' }}
                     </a>
                     <p class="mt-2 text-gray-600 dark:text-gray-200">
@@ -52,7 +52,7 @@
 
     @if($related->isNotEmpty())
         <div class="py-6 flex flex-col mt-4 gap-4">
-            <h1 class="text-xl font-bold text-gray-700 dark:text-gray-100 md:text-2xl">{{ __('Related Posts') }}</h1>
+            <h1 class="text-xl font-bold text-primary-500 dark:text-primary-100 md:text-2xl">{{ __('Related Posts') }}</h1>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 @foreach($related as $post)
