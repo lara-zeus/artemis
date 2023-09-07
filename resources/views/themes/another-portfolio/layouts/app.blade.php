@@ -5,9 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <meta name="robots" content="noindex,nofollow">
-        <meta name="googlebot" content="noindex,nofollow">
-
         <!-- Seo Tags -->
         <x-seo::meta/>
         <!-- Seo Tags -->
@@ -22,12 +19,17 @@
         <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
 
         <link rel="stylesheet" href="{{ asset('vendor/zeus-artemis/css/another-portfolio.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/flag-icons.css') }}">
 
         <style>
             [x-cloak] {
                 display: none !important;
             }
         </style>
+
+        @livewireStyles
+        @filamentStyles
+        @stack('styles')
     </head>
 
     <body x-data="{show:false}" class="antialiased bg-secondary-50 dark:bg-secondary-900">
@@ -71,7 +73,12 @@
             </div>
         </div>
 
-        <script src="{{ asset('vendor/zeus-artemis/js/another-portfolio.js') }}" defer></script>
+        @stack('scripts')
+        @livewireScripts
+        @filamentScripts
+        @livewire('notifications')
+        @livewire('livewire-ui-modal')
+
         <script>
             document.addEventListener('alpine:init', () => {
                 Alpine.data('container', () => ({
@@ -83,6 +90,7 @@
         @if(!app()->isLocal())
             <script async defer data-website-id="c97f60bc-614b-4a5e-b8d4-1caba2bff80c" src="https://stats.still-code.com/script.js"></script>
         @endif
+        <script src="{{ asset('vendor/zeus-artemis/js/another-portfolio.js') }}" defer></script>
 
     </body>
 </html>

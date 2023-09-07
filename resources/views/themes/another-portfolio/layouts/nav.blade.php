@@ -1,5 +1,5 @@
 <div class="w-full mx-auto mb-10 pt-32 flex justify-between items-center px-10 py-4">
-    <a href="{{ url('/') }}" class="text-secondary-500 text-xl">
+    <a href="{{ url('/') }}" class="text-secondary-500 text-xl whitespace-nowrap">
         {{ config('app.name') }}
     </a>
     <div>
