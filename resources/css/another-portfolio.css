@@ -1,4 +1,4 @@
-@config "../../another-portfolio.config.js";
+@config "../../tailwind-another-portfolio.config.js";
 
 @tailwind base;
 @tailwind components;

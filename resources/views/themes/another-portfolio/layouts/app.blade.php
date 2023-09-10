@@ -19,7 +19,6 @@
         <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
 
         <link rel="stylesheet" href="{{ asset('vendor/zeus-artemis/css/another-portfolio.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/flag-icons.css') }}">
 
         <style>
             [x-cloak] {
@@ -38,7 +37,7 @@
             @include($artemisTheme.'.layouts.nav')
 
             @if(isset($header) || isset($breadcrumbs))
-                <div class="bg-gray-500/10 dark:bg-gray-800">
+                <div class="my-10 bg-gray-500/10 dark:bg-gray-800">
                     <div class="max-w-7xl mx-auto py-2 px-10">
                         @if(isset($header))
                             <div class="italic font-semibold text-xl text-primary-600 dark:text-gray-100">

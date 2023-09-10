@@ -23,10 +23,16 @@
     <h3 class="text-center my-4 text-gray-600">{{ $item->description }}</h3>
 
     <x-zeus::another-card>
-        <div id="library-images-gallery" class="mas-grdi">
-            @foreach($item->getFiles() as $file)
-                @include($skyTheme.'.addons.library-types.'.strtolower($item->type))
-            @endforeach
-        </div>
+        @if($item->file_path !== null)
+            <a href="{{ $item->file_path }}" target="_blank">
+                <img class="mx-auto" src="{{ $item->file_path }}"/>
+            </a>
+        @else
+            <div id="library-images-gallery" class="mas-grdi">
+                @foreach($item->getFiles() as $file)
+                    @include($skyTheme.'.addons.library-types.'.strtolower($item->type))
+                @endforeach
+            </div>
+        @endif
     </x-zeus::another-card>
 </div>
