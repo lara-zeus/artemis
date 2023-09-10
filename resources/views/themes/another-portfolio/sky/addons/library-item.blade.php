@@ -1,5 +1,4 @@
 <div x-data>
-
     @php
         $tag = $item->tags->first();
     @endphp
