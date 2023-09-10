@@ -57,8 +57,4 @@
             @endif
         </x-filament-panels::form>
     @endif
-
-    @push('styles')
-        @filamentStyles
-    @endpush
 </div>
