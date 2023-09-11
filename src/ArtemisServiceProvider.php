@@ -26,7 +26,6 @@ class ArtemisServiceProvider extends PackageServiceProvider
         $package
             ->name(static::$name)
             ->hasAssets()
-            ->hasConfigFile()
             ->hasViews('zeus')
             ->hasTranslations();
     }

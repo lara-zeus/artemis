@@ -3,7 +3,7 @@
         {{ config('app.name') }}
     </a>
     <div>
-        @php $menu = \RyanChandler\FilamentNavigation\Models\Navigation::fromHandle(config('zeus-artemis.header_menu')); @endphp
+        @php $menu = \RyanChandler\FilamentNavigation\Models\Navigation::fromHandle(config('zeus.header_menu')); @endphp
         @if($menu !== null)
             @foreach($menu->items as $item)
                 {!! \LaraZeus\Sky\Classes\RenderNavItem::render($item,'px-3 py-2 text-lg font-karla text-primary-500 hover:text-secondary-500 dark:text-gray-400 transition-all ease-in-out duration-300') !!}
