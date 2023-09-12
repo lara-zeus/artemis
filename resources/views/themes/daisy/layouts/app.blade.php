@@ -31,7 +31,7 @@
 <body class="@if(app()->isLocal()) debug-screens @endif antialiased">
 
 <div class="container mx-auto py-4">
-    @include($artemisTheme.'.layouts.nav')
+    @include($artemisTheme.'.layouts.navigation')
 </div>
 
 @if(isset($header) || isset($breadcrumbs))

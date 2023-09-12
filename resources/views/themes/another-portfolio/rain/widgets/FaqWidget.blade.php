@@ -1,9 +1,9 @@
 <div class="space-y-3">
     @if($data['faqs'] !== null)
         @foreach($data['faqs'] as $faq)
-            <x-filament::section class="my-4" collapsible :collapsed="$data['faqs']->count() >1">
+            <x-filament::section class="my-4" collapsible :collapsed="$data['faqs']->count() > 1">
                 <x-slot name="heading">
-                    <h3 class="font-semibold">{{ $faq->question }}</h3>
+                    <h3 class="font-semibold text-secondary-500">{{ $faq->question }}</h3>
                 </x-slot>
                 {!! $faq->answer !!}
             </x-filament::section>

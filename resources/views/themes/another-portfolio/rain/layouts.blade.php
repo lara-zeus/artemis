@@ -14,7 +14,7 @@
                                 @endphp
                                 <div class="bg-white dark:bg-black shadow my-10 py-3 px-4 hover:shadow-lg transition-all ease-in-out duration-500">
                                     @if($data['data']['title'])
-                                        <h5 class="px-4 py-2 text-center font-bold text-sm lg:text-lg text-primary-600 dark:text-primary-100">
+                                        <h5 class="px-4 py-2 text-center font-bold text-sm lg:text-lg text-primary-500 dark:text-primary-100">
                                             {{ $data['data']['title'] }}
                                         </h5>
                                     @endif

@@ -1,7 +1,7 @@
 <x-zeus::card>
     <div class="space-y-2">
         <div class="flex items-center justify-between">
-        <span class="font-light text-sm text-gray-600 dark:text-gray-200">
+        <span class="font-light text-sm text-primary-400 dark:text-gray-200">
             {{ optional($post->published_at)->diffForHumans() ?? '' }}
         </span>
             <div>
@@ -11,11 +11,11 @@
             </div>
         </div>
         <aside>
-            <a href="{{ route('post',$post->slug) }}" class="text-2xl md:text-3xl font-bold text-gray-700 dark:text-gray-200 hover:underline">
+            <a href="{{ route('post',$post->slug) }}" class="text-2xl md:text-3xl font-bold text-gray-500 dark:text-gray-200 hover:underline">
                 {!! $post->title !!}
             </a>
             @if($post->description !== null)
-                <p class="text-gray-600 dark:text-gray-200">
+                <p class="my-4 text-black-50 dark:text-gray-200">
                     {!! $post->description !!}
                 </p>
             @endif

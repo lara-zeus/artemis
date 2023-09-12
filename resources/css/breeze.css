@@ -4,12 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Sky search result highlight */
-span.highlight {
-    /*@apply bg-primary-200 text-primary-700 px-2*/
+@layer components {
+    /* Sky search result highlight */
+    span.highlight {
+        @apply bg-primary-200 text-primary-700 px-2
+    }
 }
 
-/* debug tool 😜 */
-.bord {
-    border: solid 1px chocolate;
+
+@layer utilities {
+    /* debug tool 😜 */
+    .bord {
+        border: solid 1px chocolate;
+    }
 }
+

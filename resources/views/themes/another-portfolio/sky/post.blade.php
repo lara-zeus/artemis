@@ -18,9 +18,9 @@
             <img alt="{{ $post->title }}" src="{{ $post->image() }}" class=" w-full h-full shadow-md rounded-lg z-0 object-cover"/>
         @endif
 
-        <x-zeus::card>
+        <x-zeus::another-card>
             <div class="flex items-center justify-between">
-                <span class="font-light text-gray-600 dark:text-gray-200">{{ optional($post->published_at)->diffForHumans() ?? '' }}</span>
+                <span class="font-light text-primary-400 dark:text-gray-200">{{ optional($post->published_at)->diffForHumans() ?? '' }}</span>
                 <div>
                     @unless ($post->tags->isEmpty())
                         @each($skyTheme.'.partial.category', $post->tags->where('type','category'), 'category')
@@ -38,7 +38,7 @@
                     <a class="text-2xl font-bold text-primary-500 dark:text-gray-100 hover:underline">
                         {{ $post->title ?? '' }}
                     </a>
-                    <p class="mt-2 text-gray-600 dark:text-gray-200">
+                    <p class="mt-2 text-secondary-500 dark:text-gray-200">
                         {{ $post->description ?? '' }}
                     </p>
                 </div>
@@ -47,7 +47,7 @@
             <div class="mt-6 lg:mt-12 prose dark:prose-invert max-w-none">
                 {!! $post->getContent() !!}
             </div>
-        </x-zeus::card>
+        </x-zeus::another-card>
     </div>
 
     @if($related->isNotEmpty())

@@ -18,12 +18,6 @@ Publish the assets files:
 php artisan vendor:publish --tag=zeus-artemis-assets
 ```
 
-## Config
-
-```bash
-php artisan vendor:publish --tag=zeus-config
-```
-
 now, open the file `zeus.php` and set the layout and theme:
 
 ```php
@@ -35,4 +29,4 @@ now, open the file `zeus.php` and set the layout and theme:
 
 to setup the main menu, head to the admin page and create the menu.
 
-then set the slug in the `zeus-artemis.php` config file
+then set the slug in the `zeus.php` config file

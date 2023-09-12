@@ -4,8 +4,8 @@ namespace LaraZeus\Artemis\Classes;
 
 class RandomNumber
 {
-    public static function get($min, $max, $step = 5)
+    public static function get(int $min, int $max, int $step = 5): int
     {
-        return mt_rand(floor($min / $step), floor($max / $step)) * $step;
+        return mt_rand($min / $step, $max / $step) * $step;
     }
 }

@@ -50,7 +50,7 @@
             <div>
                 <div class="space-y-2">
                     <x-filament::section>
-                        <x-slot name="heading" class="text-primary-600">
+                        <x-slot name="heading" class="text-primary-500">
                             <p class="my-3 mx-1 text-custom-600 font-semibold">{{ __('Entry Details') }}</p>
                         </x-slot>
 

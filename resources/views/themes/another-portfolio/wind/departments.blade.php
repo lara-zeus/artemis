@@ -13,7 +13,7 @@
                 </x-filament::section>
                 <input type="hidden" name="{{ $getStatePath() }}" wire:model="{{ $getStatePath() }}" value="{{ \LaraZeus\Wind\WindPlugin::get()->getDefaultDepartmentId() }}">
             @else
-                <div class="max-w-4xl mx-auto text-primary-600 -mb-4 mt-4">
+                <div class="max-w-4xl mx-auto text-primary-500 -mb-4 mt-4">
                     {{ __('Select Department') }}:
                     @error($getStatePath()) <p class="text-red-500">{{ $message }}</p> @enderror
                 </div>
@@ -24,7 +24,7 @@
                             <label class="checkbox-wrapper">
                                 <input wire:model="{{ $getStatePath() }}" type="radio" class="checkbox-input" name="group" value="{{ $dept->id }}"/>
                                 <span class="checkbox-tile hover:border-custom-500 p-4">
-                                    <span class="text-primary-600 dark:text-primary-500 flex flex-col items-center justify-center gap-2">
+                                    <span class="text-primary-500 dark:text-primary-500 flex flex-col items-center justify-center gap-2">
                                         @if($dept->image() !== null)
                                             <img alt="{{ $dept->name ?? '' }}" class="w-full h-32 object-center object-cover" src="{{ $dept->image() }}">
                                         @endif
