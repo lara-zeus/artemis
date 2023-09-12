@@ -15,13 +15,12 @@ composer require lara-zeus/artemis
 Publish the assets files:
 
 ```bash
-php artisan vendor:publish --tag=zeus-assets
+php artisan vendor:publish --tag=zeus-artemis-assets
 ```
 
 ## Config
 
 ```bash
-php artisan vendor:publish --tag=zeus-artemis-config
 php artisan vendor:publish --tag=zeus-config
 ```
 
