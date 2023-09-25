@@ -18,6 +18,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
         <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
 
+        <link rel="stylesheet" href="{{ asset('vendor/zeus/frontend.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/zeus-artemis/css/another-portfolio.css') }}">
 
         <style>
