@@ -26,6 +26,8 @@
         </x-slot>
     @endif
 
+    @include($boltTheme.'.loading')
+
     @if($sent)
         @include($boltTheme.'.submitted')
     @else
