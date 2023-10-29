@@ -16,7 +16,10 @@
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
+
+        @livewireStyles
+        @filamentStyles
+        @stack('styles')
 
         <link rel="stylesheet" href="{{ asset('vendor/zeus/frontend.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/zeus-artemis/css/another-portfolio.css') }}">
@@ -26,10 +29,6 @@
                 display: none !important;
             }
         </style>
-
-        @livewireStyles
-        @filamentStyles
-        @stack('styles')
     </head>
 
     <body x-data="{show:false}" class="antialiased bg-secondary-50 dark:bg-secondary-900">
@@ -37,29 +36,32 @@
 
             @include($artemisTheme.'.layouts.navigation')
 
-            @if(isset($header) || isset($breadcrumbs))
-                <div class="my-10 bg-gray-500/10 dark:bg-gray-800">
-                    <div class="max-w-7xl mx-auto py-2 px-10">
-                        @if(isset($header))
-                            <div class="italic font-semibold text-xl text-primary-500 dark:text-gray-100">
-                                {{ $header }}
-                            </div>
-                        @endif
+            <div class="my-10 bg-gray-500/10 dark:bg-gray-800">
+                <div class="max-w-7xl mx-auto py-2 px-10">
+                    <div class="flex justify-between items-center">
+                        <div class="w-full">
+                            @if(isset($header))
+                                <div class="italic font-semibold text-xl text-primary-500 dark:text-gray-100">
+                                    {{ $header }}
+                                </div>
+                            @endif
 
-                        @if(isset($breadcrumbs))
-                            <nav class="text-gray-400 font-bold my-2" aria-label="Breadcrumb">
-                                <ol class="list-none p-0 inline-flex">
-                                    <li class="flex items-center">
-                                        <a href="{{ url('/') }}">{{ __('Home') }}</a>
-                                        @svg('heroicon-m-arrow-small-right','fill-current w-4 h-4 mx-3 rtl:rotate-180')
-                                    </li>
-                                    {{ $breadcrumbs }}
-                                </ol>
-                            </nav>
-                        @endif
+                            @if(isset($breadcrumbs))
+                                <nav class="text-gray-400 font-bold my-2" aria-label="Breadcrumb">
+                                    <ol class="list-none p-0 inline-flex">
+                                        <li class="flex items-center">
+                                            <a href="{{ url('/') }}">{{ __('Home') }}</a>
+                                            @svg('heroicon-m-arrow-small-right','fill-current w-4 h-4 mx-3 rtl:rotate-180')
+                                        </li>
+                                        {{ $breadcrumbs }}
+                                    </ol>
+                                </nav>
+                            @endif
+                        </div>
+                        <div class="bolt-loading animate-pulse"></div>
                     </div>
                 </div>
-            @endif
+            </div>
 
             <main class="px-10"
                 x-cloak x-show="show"

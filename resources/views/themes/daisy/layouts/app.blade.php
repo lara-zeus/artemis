@@ -13,12 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=KoHo:ital,wght@0,200;0,300;0,500;0,700;1,200;1,300;1,600;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('vendor/zeus/frontend.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/zeus-artemis/css/daisy.css') }}">
-
     @livewireStyles
     @filamentStyles
     @stack('styles')
+
+    <link rel="stylesheet" href="{{ asset('vendor/zeus/frontend.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/zeus-artemis/css/daisy.css') }}">
 
     <style>
         * {font-family: 'KoHo', 'Almarai', sans-serif;}
@@ -34,29 +34,32 @@
     @include($artemisTheme.'.layouts.navigation')
 </div>
 
-@if(isset($header) || isset($breadcrumbs))
-    <div class="container mx-auto py-4 my-4">
-        <div class="alert shadow-lg flex flex-col items-start">
-            @if(isset($header))
-                <div class="italic font-semibold text-xl text-gray-600 dark:text-gray-100">
-                    {{ $header }}
-                </div>
-            @endif
+<div class="container mx-auto my-10 card card-compact w-full bg-base-200 shadow-lg">
+    <div class="card-body">
+        <div class="flex justify-between items-center">
+            <div class="flex flex-col items-start">
+                @if(isset($header))
+                    <div class="italic font-semibold text-xl text-gray-600 dark:text-gray-100">
+                        {{ $header }}
+                    </div>
+                @endif
 
-            @if(isset($breadcrumbs))
-                <nav class="text-gray-400 font-bold my-2" aria-label="Breadcrumb">
-                    <ol class="list-none p-0 inline-flex">
-                        <li class="flex items-center">
-                            <a href="{{ route('blogs') }}">Home</a>
-                            @svg('iconpark-rightsmall-o','fill-current w-4 h-4 mx-3')
-                        </li>
-                        {{ $breadcrumbs }}
-                    </ol>
-                </nav>
-            @endif
+                @if(isset($breadcrumbs))
+                    <nav class="text-gray-400 font-bold my-2" aria-label="Breadcrumb">
+                        <ol class="list-none p-0 inline-flex">
+                            <li class="flex items-center">
+                                <a href="{{ route('blogs') }}">Home</a>
+                                @svg('iconpark-rightsmall-o','fill-current w-4 h-4 mx-3')
+                            </li>
+                            {{ $breadcrumbs }}
+                        </ol>
+                    </nav>
+                @endif
+            </div>
+            <div class="bolt-loading animate-pulse"></div>
         </div>
     </div>
-@endif
+</div>
 
 <div class="container mx-auto">
     {{ $slot }}
@@ -81,6 +84,7 @@
 @livewireScripts
 @filamentScripts
 @livewire('notifications')
+@livewire('livewire-ui-modal')
 
 <script>
     const theme = localStorage.getItem('theme')
