@@ -26,7 +26,7 @@
     </style>
 </head>
 
-@php $menu = RyanChandler\FilamentNavigation\Models\Navigation::fromHandle(config('zeus.header_menu')) @endphp
+@php $menu = \LaraZeus\Sky\SkyPlugin::get()->getModel('Navigation')::fromHandle(config('zeus.header_menu')) @endphp
 
 <body class="@if(app()->isLocal()) debug-screens @endif antialiased">
 
