@@ -1,7 +1,7 @@
 <div class="container mx-auto">
     @if($layout->widgets !== null)
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6 w-full px-2">
-            @foreach (\LaraZeus\Rain\RainPlugin::get()->getModel('Columns')::all() as $column)
+            @foreach (\LaraZeus\DynamicDashboard\DynamicDashboardPlugin::get()->getModel('Columns')::all() as $column)
                 <div class="w-full {{ $column->class }}">
                     @if(isset($layout->widgets[$column->key]))
                         @php

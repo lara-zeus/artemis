@@ -17,9 +17,9 @@ export default {
         // Bolt
         '../bolt/resources/views/themes/**/*.blade.php',
         '../bolt/src/Models/FormsStatus.php',
-        // Rain
-        '../rain/resources/views/themes/**/*.blade.php',
-        '../rain/src/Models/Columns.php',
+        // dynamic-dashboard
+        '../dynamic-dashboard/resources/views/themes/**/*.blade.php',
+        '../dynamic-dashboard/src/Models/Columns.php',
         // filament
         './vendor/filament/**/*.blade.php',
         './src/CoreServiceProvider.php',
