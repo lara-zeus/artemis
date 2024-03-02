@@ -6,19 +6,30 @@
                     <div x-data class="flex items-center justify-between text-primary-500 dark:text-primary-400 hover:dark:text-primary-300">
                         <h3>{{ $library->title ?? '' }}</h3>
                         @if($library->type === 'IMAGE')
-                            <span x-tooltip.raw="{{ __('Image') }}">
+                            <span
+                                x-tooltip="{
+                                    content: @js(__('Image')),
+                                    theme: $store.theme,
+                                  }">
                             @svg('heroicon-o-photo','w-4 h-4 text-gray-400 dark:text-gray-500')
                         </span>
                         @endif
 
                         @if($library->type === 'FILE')
-                            <span x-tooltip.raw="{{ __('File') }}">
+                            <span x-tooltip="{
+                                    content: @js(__('File')),
+                                    theme: $store.theme,
+                                  }">
                             @svg('heroicon-o-document','w-4 h-4 text-gray-400 dark:text-gray-500')
                         </span>
                         @endif
 
                         @if($library->type === 'VIDEO')
-                            <span x-tooltip.raw="{{ __('Video') }}">
+                            <span
+                                x-tooltip="{
+                                    content: @js(__('Video')),
+                                    theme: $store.theme,
+                                  }">
                             @svg('heroicon-o-film','w-4 h-4 text-gray-400 dark:text-gray-500')
                         </span>
                         @endif
