@@ -34,7 +34,7 @@
     },
     "require-dev": {
         "laravel/pint": "^1.0",
-        "nunomaduro/larastan": "^2.0.1",
+        "larastan/larastan": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "nunomaduro/collision": "^7.0",
         "nunomaduro/phpinsights": "^2.8",
@@ -61,5 +61,6 @@
             ]
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
