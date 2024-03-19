@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://larazeus.com"><img src="https://larazeus.com/images/artemis-banner.png" /></a>
+<a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-artemis.png" /></a>
 </p>
 
 <h4 align="center">Lara-zeus Artemis, telling a story with a design. Themes for all Lara Zeus packages</h4>
