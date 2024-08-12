@@ -67,7 +67,7 @@
 
 <footer class="mt-10 footer items-center p-4 bg-base-200 text-base-content">
     <div class="items-center grid-flow-col">
-        <img alt="Lara Zeus" loading="lazy" width="30" height="20" decoding="async" src="https://larazeus.com/images/zeus-logo.png">
+        <img alt="Lara Zeus" loading="lazy" width="30" height="20" decoding="async" src="https://larazeus.com/images/zeus-logo.webp">
         <a href="https://larazeus.com" target="_blank">
             a gift with ❤️ &nbsp;from @zeus
         </a>

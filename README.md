@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-artemis.png" /></a>
+<a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-artemis.webp" /></a>
 </p>
 
 <h4 align="center">Lara-zeus Artemis, telling a story with a design. Themes for all Lara Zeus packages</h4>
@@ -18,7 +18,7 @@
 ## Support Filament
 
 <a href="https://github.com/sponsors/danharrin">
-<img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.png">
+<img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.webp">
 </a>
 
 ## features
@@ -40,8 +40,8 @@ And more on the way.
 
 ## Quick start
 
-[![starter-kit](https://larazeus.com/images/starter-kit-mini.png?v=2)](https://github.com/lara-zeus/zeus)
-[![artemis](https://larazeus.com/images/artemis-mini.png?v=2)](https://github.com/lara-zeus/artemis)
+[![starter-kit](https://larazeus.com/images/starter-kit-mini.webp?v=2)](https://github.com/lara-zeus/zeus)
+[![artemis](https://larazeus.com/images/artemis-mini.webp?v=2)](https://github.com/lara-zeus/artemis)
 
 ## Changelog
 

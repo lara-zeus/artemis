@@ -6,7 +6,7 @@
     </div>--}}
     <div class="flex-1">
         <a class="flex gap-2 btn btn-ghost normal-case text-xl" href="{{ url('/') }}">
-            <img class="w-7 mx-auto" src="https://larazeus.com/images/zeus-logo.png" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
+            <img class="w-7 mx-auto" src="https://larazeus.com/images/zeus-logo.webp" alt="{{ config('zeus.wind.name', config('app.name', 'Laravel')) }}">
             @zeus
         </a>
     </div>
