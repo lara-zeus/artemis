@@ -23,9 +23,8 @@
     "type": "library",
     "authors": [
         {
-            "name": "php coder",
-            "email": "wh7r.com@gmail.com",
-            "role": "Owner"
+            "name": "Lara Zeus (Ash)",
+            "email": "wh7r.com@gmail.com"
         }
     ],
     "require": {

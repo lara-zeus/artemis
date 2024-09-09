@@ -49,7 +49,6 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on recent changes.
 
 ## Support
 available support channels:
-* join our channel in discord [Discord](https://discord.com/channels/883083792112300104/965924351289491496)
 * open an issue on [GitHub](https://github.com/lara-zeus/bolt/issues)
 * Email us using the [contact center](https://larazeus.com/contact-us)
 
@@ -63,7 +62,7 @@ If you find any security-related issues, please email info@larazeus.com instead 
 
 ## Credits
 
--   [php coder](https://github.com/atmonshi)
+-   [Lara Zeus (Ash)](https://github.com/atmonshi)
 -   [All Contributors](../../contributors)
 
 ## License
