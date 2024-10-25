@@ -89,9 +89,6 @@
             })
         </script>
 
-        @if(!app()->isLocal())
-            <script async defer data-website-id="c97f60bc-614b-4a5e-b8d4-1caba2bff80c" src="https://stats.still-code.com/script.js"></script>
-        @endif
         <script src="{{ asset('vendor/zeus-artemis/js/another-portfolio.js') }}" defer></script>
 
     </body>
