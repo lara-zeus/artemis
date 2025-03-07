@@ -10,7 +10,7 @@
     <x-slot name="breadcrumbs">
         <li class="flex items-center">
             <a href="{{ route('library.tag',$tag->slug) }}">{{ $tag->name }}</a>
-            @svg('iconpark-rightsmall-o','fill-current w-4 h-4 mx-3')
+            @svg('heroicon-s-arrow-small-right','fill-current w-4 h-4 mx-3')
         </li>
 
         <li class="flex items-center">

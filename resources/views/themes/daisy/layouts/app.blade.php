@@ -49,7 +49,7 @@
                         <ol class="list-none p-0 inline-flex">
                             <li class="flex items-center">
                                 <a href="{{ route('blogs') }}">Home</a>
-                                @svg('iconpark-rightsmall-o','fill-current w-4 h-4 mx-3')
+                                @svg('heroicon-s-arrow-small-right','fill-current w-4 h-4 mx-3')
                             </li>
                             {{ $breadcrumbs }}
                         </ol>
