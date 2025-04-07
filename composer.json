@@ -29,7 +29,7 @@
     ],
     "require": {
         "php": "^8.1",
-        "lara-zeus/core": "^3.0"
+        "lara-zeus/core": "*"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
