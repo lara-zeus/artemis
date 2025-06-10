@@ -28,18 +28,18 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "lara-zeus/core": "*"
+        "php": "^8.2",
+        "lara-zeus/core": "^4.0"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "larastan/larastan": "^3.4",
         "laravel/pint": "^1.0",
-        "larastan/larastan": "^2.0",
-        "phpstan/extension-installer": "^1.1",
-        "nunomaduro/collision": "^7.0",
-        "nunomaduro/phpinsights": "^2.8",
-        "orchestra/testbench": "^8.0",
-        "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.0"
+        "orchestra/testbench": "^10.0",
+        "phpstan/extension-installer": "^1.4",
+        "larastan/larastan": "^3.0",
+        "nunomaduro/collision": "^8.6",
+        "nunomaduro/phpinsights": "^2.8"
     },
     "autoload": {
         "psr-4": {
