@@ -21,7 +21,10 @@
 <img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.webp">
 </a>
 
-## features
+> [!WARNING]
+> This plugin supports only Filament v3 and is no longer updated or maintained for later Filament versions
+
+## Features
 - 🔥 Themes for all Zeus packages.
 - 🔥 Highly Customizable.
 - 🔥 Daisy Theme.
